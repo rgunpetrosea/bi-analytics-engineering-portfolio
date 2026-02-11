@@ -1,0 +1,4 @@
+customer_id,customer_name,customer_email,customer_country,customer_segment,signup_date
+C001,John Doe,john@example.com,US,Consumer,2023-10-01
+C002,Jane Smith,jane@example.com,UK,SMB,2023-11-15
+C003,Bob Lee,bob@example.com,AU,Enterprise,2023-12-20

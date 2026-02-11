@@ -6,32 +6,15 @@ Purpose     : Core fact table for revenue and sales performance analysis
 Owner       : Analytics Engineering
 */
 
-WITH base_sales AS (
-    SELECT
-        order_id,
-        order_date,
-        customer_id,
-        product_id,
-        channel,
-        quantity,
-        gross_revenue,
-        discount_amount,
-        net_revenue
-    FROM staging_sales
-),
-
-final AS (
-    SELECT
-        order_id,
-        order_date,
-        customer_id,
-        product_id,
-        channel,
-        quantity,
-        gross_revenue,
-        discount_amount,
-        net_revenue
-    FROM base_sales
-)
-
-SELECT * FROM final;
+CREATE OR REPLACE TABLE fact_sales AS
+SELECT
+    order_id,
+    order_date,
+    customer_id,
+    product_id,
+    channel,
+    quantity,
+    gross_revenue,
+    discount_amount,
+    net_revenue
+FROM staging_sales;

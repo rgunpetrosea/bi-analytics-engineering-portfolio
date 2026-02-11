@@ -6,6 +6,7 @@ Layer   : Staging
 Owner   : Analytics Engineering
 */
 
+CREATE OR REPLACE TABLE staging_customers AS
 SELECT
     customer_id,
     customer_name,
